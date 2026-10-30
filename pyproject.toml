@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uds2gedcom"
+dynamic = ["version"]
+description = "Convert Sierra Generations / EasyTree .uds family tree files to GEDCOM"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "alexanxin"}]
+keywords = ["genealogy", "gedcom", "family tree", "sierra generations", "easytree", "uds", "yuscii"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Sociology :: Genealogy",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/alexanxin/uds2gedcom"
+Issues = "https://github.com/alexanxin/uds2gedcom/issues"
+
+[project.scripts]
+uds2gedcom = "uds2gedcom.cli:main"
+
+[tool.setuptools]
+packages = ["uds2gedcom"]
+
+[tool.setuptools.dynamic]
+version = {attr = "uds2gedcom.__version__"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

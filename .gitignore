@@ -1,0 +1,13 @@
+# family files are private: only the invented examples belong here
+*.uds
+!examples/*.uds
+*.ged
+uds2gedcom-out/
+
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.DS_Store
